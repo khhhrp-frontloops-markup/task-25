@@ -1,15 +1,29 @@
 document.addEventListener("DOMContentLoaded", (event) => {
-  const infoItems = document.querySelectorAll(".info__item");
+  const monthGraphItems = document.querySelectorAll(".month-graph__item");
 
-  infoItems.forEach((item) => {
+  monthGraphItems.forEach((item) => {
     item.addEventListener("click", function (e) {
-      item.classList.toggle("info__item--active");
+      console.log("1");
 
-      infoItems.forEach((otherItem) => {
+      item.classList.toggle("month-graph__item--active");
+
+      monthGraphItems.forEach((otherItem) => {
         if (otherItem !== item) {
-          otherItem.classList.remove("info__item--active");
+          otherItem.classList.remove("month-graph__item--active");
         }
       });
     });
   });
+
+  const Jun = {
+    g: 20,
+    b: 10,
+    o: 60,
+  };
+
+  const Jul = {
+    g: 60,
+    b: 20,
+    o: 10,
+  };
 });
